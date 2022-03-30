@@ -23,9 +23,8 @@ fun SalariosComBigDecimal() {
     }
     println(gastoTotal)
 
-    val salariosOrdenados = salariosComAumento.sorted()
-    val tresUltimosSalarios = salariosOrdenados.takeLast(3)
-
+    val media = salariosComAumento.sorted().takeLast(3).toTypedArray().media()
+    println(media)
 }
 
 private fun calculaAumentoRelativo(salario: BigDecimal, aumento: BigDecimal): BigDecimal {

@@ -1,6 +1,6 @@
 package br.com.projeto
 
-fun ranges2() {
+fun main() {
     val idades = intArrayOf(10, 12, 18, 33, 40, 67)
     val maiorIdade = idades.maxOrNull()
     println("Maior idade: $maiorIdade")
@@ -14,7 +14,7 @@ fun ranges2() {
     val todosMaiores = idades.all { it >= 18 }
     println("Todas as idades da lista são maiores ou iguais a 18 anos? $todosMaiores")
 
-    val existeMaior = idades.any { it >= 18}
+    val existeMaior = idades.any { it >= 18 }
     println("Algum aluno é maior de idade? $existeMaior")
 
     val maiores = idades.filter { it >= 18 }

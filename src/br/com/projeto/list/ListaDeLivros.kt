@@ -1,6 +1,6 @@
 package br.com.projeto.list
 
-fun ListaDeLivros() {
+fun main() {
     val livro1 = Livro(
         titulo = "Clean Code",
         autor = "Robert C. Martin",
@@ -55,17 +55,10 @@ fun ListaDeLivros() {
     println()
     println("Filtrado por autor e data de publicação")
 
-    val titulos: List<String> = livros
+    val titulos: List<String> = listaDeLivros
         .filter { it.autor.startsWith("Robert") }
         .sortedBy { it.anoPublicacao }
         .map { it.titulo }
 
     println(titulos)
-}
-
-fun List<Livro>.imprimeComMarcadores() {
-    val textoFormatado = this.joinToString(separator = "\n") {
-        "- ${it.titulo} de ${it.autor}"
-    }
-    println(" --- Lista de Livros --- \n$textoFormatado")
 }
